@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class potencias {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.println("Introduce un número entero");
+        int num = sc.nextInt();
+
+        double suma = 0;
+
+        while (num > 0) {
+            int digito = num % 10;
+
+            suma = suma + Math.pow(digito, 3);
+
+            num = num / 10;
+        }
+        System.out.println("La suma es: " + suma);
+    }
+
+}
